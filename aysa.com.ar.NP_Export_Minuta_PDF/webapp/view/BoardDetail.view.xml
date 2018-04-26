@@ -1,0 +1,47 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="aysa.com.ar.controller.BoardDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="ttttttttttttttttttt" showNavButton="true" navButtonPress="navButtonPress" id="detailPage">
+				<content>
+					<Table items="{path:'/'}" id="cardsTable" rememberSelections="false" growing="true" growingDirection="Upwards">
+				        <items>
+				            <ColumnListItem id="item" highlight="Information">
+				                <cells>
+				                    <Text text="{name}" id="name"/>
+				                    <Text text="{desc}" id="desc"/>
+				                    <Text text="{shortLink}" id="shortLink"/>
+				                    <Text text="{idList}" id="idList"/>
+				                </cells>
+				            </ColumnListItem>
+				        </items>
+				        <columns>
+				            <Column id="cardNameColumn">
+				                <header>
+				                    <Label text="Nombre de tarea" id="cardNameLabel"/>
+				                </header>
+				            </Column>
+				           <Column id="cardDescColumn">
+				                <header>
+				                    <Label text="Descripcion" id="cardDescLabel"/>
+				                </header>
+				            </Column>
+				            <Column id="cardTagColumn">
+				                <header>
+				                    <Label text="Etiqueta" id="cardTagLabel"/>
+				                </header>
+				            </Column>
+				            <Column id="cardStatusolumn">
+				                <header>
+				                    <Label text="Estado" id="cardStatusLabel"/>
+				                </header>
+				            </Column>
+				            </columns></Table>
+				</content>
+				<headerContent>
+			    <Button text="Exportar PDF" width="140px" id="btnExport" icon="sap-icon://download" type="Emphasized" press="onDataExportPDF"/>
+			</headerContent>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

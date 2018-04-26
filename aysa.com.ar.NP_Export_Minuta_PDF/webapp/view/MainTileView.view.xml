@@ -1,0 +1,30 @@
+<mvc:View controllerName="aysa.com.ar.controller.MainTileView" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App id="rootControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Table items="{path:'/'}" id="boardsTable" mode="SingleSelectMaster" itemPress="onPressItem" selectionChange="onPressItem" rememberSelections="false" growing="true" growingDirection="Upwards">
+				        <items>
+				            <ColumnListItem id="item" highlight="Information">
+				                <cells>
+				                    <Text text="{name}" id="name"/>
+				                    </cells>
+				            </ColumnListItem>
+				        </items>
+				        <columns>
+				            <Column id="boardNameColumn">
+				                <header>
+				                    <Label text="Tablero" id="boardNameLabel"/>
+				                </header>
+				            </Column>
+				            </columns>
+				            </Table>
+				</content>
+				<headerContent>
+			    <Button text="Exportar PDF" width="140px" id="btnExport" icon="sap-icon://download" type="Emphasized" press="onDataExportPDF"/>
+			</headerContent>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
