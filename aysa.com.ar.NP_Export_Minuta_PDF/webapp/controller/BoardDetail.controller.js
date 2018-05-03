@@ -33,8 +33,11 @@ sap.ui.define([
 		},
 		_selectItemWithId: function(id) {
 			var successGetLists = function(successLists) {
+				
 				var successGetCards = function(successCards) {
+					
 					successCards.forEach(function(currentVal) {
+						
 						var str = currentVal.desc.split("---");
 						currentVal.desc = str[0];
 						if (currentVal.labels.length > 0) {
@@ -56,9 +59,14 @@ sap.ui.define([
 				var errorGetCards = function(errorCards) {};
 				lists = successLists;
 				Trello.get("/boards/" + id + "/cards", successGetCards, errorGetCards);
+				//https://api.trello.com/1/boards/{boardId}/cards
 			};
 			var errorGetLists = function(errorLists) {};
 			Trello.get("/boards/" + id + "/lists", successGetLists, errorGetLists);
+			/*
+			var errorGetComments = function(){};
+			Trello.get("/");*/
+			console.log(lists);
 		},
 
 		navButtonPress: function() {

@@ -36,7 +36,7 @@ sap.ui.define([
 		}; 
 
 		var authenticationSuccess = function() {
-				Trello.get('/member/me/boards', success, error);
+				Trello.get("/member/me/boards", success, error);
 		};
 
 		var authenticationFailure = function() {
@@ -59,7 +59,7 @@ sap.ui.define([
 		
 		_onObjectMatched: function(oEvent) {
 			if(oBoardsTable !== null){
-				Trello.get('/member/me/boards', success, error);
+				Trello.get("/member/me/boards", success, error);
 			}
 		},
 		
